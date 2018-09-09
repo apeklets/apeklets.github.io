@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('fonts/MyriadPro-Regular.otf') format('opentype');
+    font-weight: 400;
+} @font-face {
+    font-family: 'Myriad Pro';
+    src: url('fonts/MyriadPro-Bold.otf') format('opentype');
+    font-weight: 700;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden scroll;
+}
+
+.fancy-comma {
+    font-family: Arial;
+    font-size: 1.1em;
+    display: inline-block;
+    transform: rotate(6deg);
+} .fancy-period {
+    font-family: Arial;
+    font-size: 1.1em;
+}
+
+.btn-primary {
+    color: rgb(102, 179, 227);
+    background-color: #0000;
+    font-weight: 700;
+    letter-spacing: 0.33px;
+    transition: background-color 400ms ease, color 300ms ease-out;
+    border-radius: 0;
+    border-width: 2px;
+} .btn-primary:hover {
+    background-color: #28609099; 
+}
+
+.img-pull {
+    margin: 0 15px;
+    border: 1px solid #008dd543;
+}
+
+.nav-container {
+    top: 0;
+    position: fixed;
+    z-index: 999;
+    width: 100vw;
+    transition: background-color 500ms ease;
+} .nav-container.overlay {
+    background-color: #0005;
+}
+.main-nav {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 auto;
+    max-width: 350px;
+} .main-nav li {
+    display: inline-block;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    transition: background-color 300ms ease;
+} .main-nav li:hover {
+    background-color: #0005;
+} .main-nav li a {
+    color: #FFF;
+    font-size: 14px;
+} .main-nav li a:hover, .main-nav li a:focus {
+    text-decoration: none;
+}
+
+.parallax-bg {
+    background-image: url('../img/flatlay.jpg');
+    background-color: #1118;
+    background-blend-mode: darken;
+    background-size: 119%;
+    background-position: center 0px;
+    min-height: 100vh;
+    width: 100vw;
+    color: #FFF;
+    position: relative;
+} .parallax-bg .jumbotron-content {
+    text-align: center;
+    top: 40vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+    position: absolute;
+} .parallax-bg .jumbotron-content h1 {
+    font-size: 3em;
+    letter-spacing: 0.04em;
+    margin-bottom: -10px;
+    font-family: 'Lato', sans-serif;
+} .parallax-bg .jumbotron-content p {
+    font-size: 1.4em;
+}
+
+a.info::after {
+    content: '\24D8';
+    font-size: 22px;
+    position: absolute;
+    bottom: 3px;
+    right: 25px;
+    color: #EEEEEEB0;
+    transition: color 137ms ease;
+} a.info:hover::after {
+    color: #EEE;
+}
+
+section p {
+    font-size: 1.6rem;
+}
+
+section#over {
+    background-color: #222;
+    color: #F2F2F2;
+    padding-bottom: 65px;
+    padding-top: 20px;
+} section#over p {
+    margin-bottom: 0px;
+} section#over .page-header {
+    opacity: 0;
+    width: 0px;
+    margin-top: 30px;
+    transition: width 800ms ease-in-out, opacity 400ms ease-out;
+} section#over.in .page-header {
+    width: 100%;
+    opacity: 1;
+} section#over .img-pull {
+    opacity: 0;
+    transition: opacity 1000ms ease 250ms;
+} section#over.in .img-pull {
+    opacity: 1;
+}
+
+section#exp {
+    background-image: linear-gradient(#0005, #0005), linear-gradient(to bottom, rgba(0,0,0,0.25) 0%,rgba(0,0,0,0.75) 25%,rgba(0,0,0,0.8) 50%,rgba(0,0,0,0.75) 75%,rgba(0,0,0,0.25) 100%), url('../img/code.jpg');
+    background-size: cover;
+    background-position: 0px;
+    color: #FFF;
+    position: relative;
+    width: 100vw;
+}
+.exp-container {
+    margin: 30px 0;
+    padding: 30px 0;
+} .exp-list-container {
+    /*border-left: 1px solid #BBB;*/
+    position: relative;
+} .exp-list-container::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 200px;
+    width: 1px;
+    background-color: #BBB;
+    transition: bottom 750ms ease-in-out 100ms;
+} .exp-container.in .exp-list-container::before {
+    bottom: 0;
+} .exp-title {
+    letter-spacing: 0.02em;
+    text-shadow: 0 0 5px #FFF9;
+    opacity: 0;
+    transform: translateY(-25px);
+    transition: opacity 800ms ease-out, transform 500ms cubic-bezier(.28,.27,.46,.99);
+} .exp-container.in .exp-title {
+    opacity: 1;
+    transform: translateY(0);
+} .exp-list {
+    list-style: none;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 800ms ease-out 200ms, transform 500ms cubic-bezier(.28,.27,.46,.99) 200ms;
+} .exp-container.in .exp-list {
+    opacity: 1;
+    transform: translateX(0px);
+} .exp-list li {
+    font-family: 'Lato';
+    font-size: 1.2em;
+    text-shadow: 0 0 5px #FFF9;
+    margin-bottom: 2px;
+} .exp-list li::before {
+    content: "\e072";
+    font-family: 'Glyphicons Halflings';
+    font-size: 0.8em;
+    margin-right: 0.8em;
+    text-shadow: 0 0 1px #FFF8;
+} .exp-list li a {
+    color: #F2F2F2;
+    text-decoration: underline;
+} .exp-list li a:hover {
+    color: #BBB;
+}
+
+section#types {
+    margin: 40px 0;
+    text-align: center;
+} section#types hr { 
+    margin: 20px 40px;
+    height: 1px;
+    border: 0;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0)); 
+} section#types .btn {
+    margin-top: 20px;
+    opacity: 0;
+    transform: scale(0.75);
+    transition: opacity 750ms ease-in 310ms, transform 600ms ease-out 300ms, background-color 250ms ease, color 300ms ease-out;
+} section#types h3, section#types .p-fade-in {
+    transform: scale(0);
+} section#types .p-fade-in strong {
+    font-family: 'Myriad Pro';
+} section#types h3 {
+    transition: transform 750ms ease-out;
+} section#types p {
+    transition: transform 650ms cubic-bezier(.45,.05,.55,.95) 100ms
+} section#types .in h3, section#types .in .p-fade-in {
+    transform: scale(1);
+} section#types .price {
+    overflow: hidden;
+} section#types .price p {
+    font-size: 1.6em;
+} section#types .price strong {
+    display: inline-block;
+    transform: translateY(35px);
+    transition: transform 500ms ease-out 200ms;
+} section#types .price .fancy-euro {
+    font-family: 'Myriad Pro', 'Arial';
+    font-size: 1.7rem;
+    transform: translateY(-3px);
+    display: inline-block;
+	padding-left: 2px;
+} section#types .in .price strong {
+    transform: translateY(0);
+} section#types.in .btn {
+    opacity: 1;
+    transform: scale(1);
+}
+
+section#werk {
+    background-image: url('../img/panorama.jpg');
+    /*background-color: #1118;
+    background-blend-mode: darken;*/
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0px 0px;
+    color: #FFF;
+    padding: 30px 0;
+} section#werk .page-header {
+    text-align: center;
+    border-color: #BBB;
+    margin: 0 auto;
+    margin-top: 40px;
+    min-width: 100px;
+    width: 5vw;
+    transition: width 800ms ease-out;
+} section#werk .page-header p {
+    font-size: 36px;
+    opacity: 0;
+    transform: translateY(-25px);
+    transition: transform 500ms ease-out, opacity 800ms ease-in;
+} section#werk .thumbnail {
+	box-shadow: 0 0 4px 0 #000D;
+    opacity: 0;
+    transform: translateY(25px);
+    transition: transform 500ms ease 200ms, opacity 600ms ease-out 150ms, background-color 250ms ease;
+    background-color: #0007;
+} section#werk .thumbnail:hover {
+    background-color: #000A;
+} section#werk.in .page-header {
+    width: 50vw;
+} section#werk.in .page-header p {
+    transform: translateY(0);
+    opacity: 1;
+} section#werk.in .thumbnail {
+    opacity: 1;
+    transform: translateY(0);
+} section#werk .row {
+    padding: 40px 0;
+    margin-bottom: 40px;
+}  section#werk .caption h3 {
+    font-family: 'Myriad Pro';
+    font-size: 1.3em;
+    color: #F3F3F3;
+    text-align: center;
+    margin: 6px 0 0 0;
+}
+
+section#contact {
+    background-color: #111;
+    color: #F2F2F2;
+    padding: 50px 0;
+} section#contact > .container > .row {
+    perspective: 1000px;
+} section#contact .col-md-4 {
+    text-align: right;
+} section#contact h1 {
+    margin-top: 0;
+    opacity: 0;
+    transform: rotateX(90deg);
+    transition: transform 600ms ease-in-out 100ms, opacity 400ms ease-out 200ms;
+} section#contact.in h1 {
+    opacity: 1;
+    transform: rotateX(0deg);
+} section#contact .email {
+    overflow: hidden;
+    font-family: 'Myriad Pro', sans-serif;
+} section#contact .email span {
+    display: inline-block;
+    transition: transform 500ms ease-in-out 300ms;
+} section#contact .email span.name {
+    transform: translateY(-25px) rotateX(90deg);
+} section#contact .email span.domain {
+    transform: translateY(25px) rotateX(-90deg);
+} section#contact .email span.fancy-at {
+    transform: scale(0);
+} section#contact.in .email span {
+    transform: translateY(0);
+} section#contact.in .email span.fancy-at {
+    transform: scale(1);
+} section#contact p {
+    opacity: 0;
+    transform: rotateY(45deg) translateZ(100px);
+    transition: transform 500ms ease-out 200ms, opacity 600ms ease-out 300ms;
+} section#contact.in p {
+    opacity: 1;
+    transform: none;
+} 
+
+footer {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #000;
+    color: #CCC;
+} footer h1 {
+    letter-spacing: 1px;
+} footer p {
+    margin-bottom: 40px;
+    font-size: 1.4em;
+} footer a {
+    color: #BBB;
+    transition: color 300ms ease;
+} footer a:hover {
+    color: #FFF;
+}
+.copy {
+    margin-top: 40px;
+    font-size: 1.1em;
+    display: block;
+    position: relative;
+    color: #999;
+    font-family: 'Lato', sans-serif;
+} .copy::before, .copy::after {
+    content: '';
+    position: absolute;
+    bottom: 45%;
+    height: 1px;
+    background-color: #999;
+    width: 100px;
+} .copy::before {
+    left: 33.33%;
+} .copy::after {
+    right: 33.33%;
+}
+
+@media (max-width: 992px) {
+    .parallax-bg {
+        background-size: cover;
+    }
+    section#types .col-md-4 p {
+        padding: 0 20px;
+    }
+    body {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 2000px) {
+	body {
+		font-size: 17px;
+    }
+    html {
+        font-size: 11px;
+    }
+}
