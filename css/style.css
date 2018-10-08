@@ -220,22 +220,6 @@ section#types {
     transition: transform 650ms cubic-bezier(.45,.05,.55,.95) 100ms
 } section#types .in h3, section#types .in .p-fade-in {
     transform: scale(1);
-} section#types .price {
-    overflow: hidden;
-} section#types .price p {
-    font-size: 1.6em;
-} section#types .price strong {
-    display: inline-block;
-    transform: translateY(35px);
-    transition: transform 500ms ease-out 200ms;
-} section#types .price .fancy-euro {
-    font-family: 'Myriad Pro', 'Arial';
-    font-size: 1.7rem;
-    transform: translateY(-3px);
-    display: inline-block;
-	padding-left: 2px;
-} section#types .in .price strong {
-    transform: translateY(0);
 } section#types.in .btn {
     opacity: 1;
     transform: scale(1);
